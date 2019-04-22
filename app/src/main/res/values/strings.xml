@@ -43,19 +43,19 @@
 
     <!--Post Staggered Recycler View data-->
     <string name="painting_hack_title">11 Little Known Painting Hacks from Expert Field Editors</string>
-    <string name="painting_author">FamilyHandymen</string>
+    <string name="painting_author">👤FamilyHandymen</string>
     <string name="painting_likes">♡ 5.5K</string>
 
     <string name="refrig_title">7 Genius Organization Tips to Transform Your Refrigerator</string>
-    <string name="refrig_author">JacquelineWeiss</string>
+    <string name="refrig_author">👤JacquelineWeiss</string>
     <string name="refrig_likes">♡ 1.9K</string>
 
     <string name="cattree_title">50 bucks Makes a Cute Cat Tree</string>
-    <string name="cattree_author">一条鲫鱼呀</string>
+    <string name="cattree_author">👤一条鲫鱼呀</string>
     <string name="cattree_likes">♡ 850</string>
 
     <string name="porridge_title">Healthy Carrot Cake Porridge</string>
-    <string name="porridge_author">MoniqueTheNutritionist</string>
+    <string name="porridge_author">👤MoniqueTheNutritionist</string>
     <string name="porridge_likes">♡ 99</string>
 
 </resources>
