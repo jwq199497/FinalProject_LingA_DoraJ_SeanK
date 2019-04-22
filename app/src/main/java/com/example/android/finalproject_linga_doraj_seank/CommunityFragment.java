@@ -43,10 +43,10 @@ public class CommunityFragment extends Fragment {
     private void initialBitmaps(){
         Log.d(TAG, "InitialBitmaps preparing");
 
-        posts.add(new Post(R.string.painting_url, R.string.painting_hack_title, R.string.painting_author, R.string.painting_likes));
-        posts.add(new Post(R.string.refrig_url,R.string.refrig_title, R.string.refrig_author, R.string.refrig_likes));
-        posts.add(new Post(R.string.cattree_url, R.string.cattree_title, R.string.cattree_author, R.string.cattree_likes));
-        posts.add(new Post(R.string.porridge_url, R.string.porridge_title, R.string.porridge_author, R.string.porridge_likes));
+        posts.add(new Post("https://www.familyhandyman.com/wp-content/uploads/2017/05/FH16JUN_PAINTS_11.jpg", R.string.painting_hack_title, R.string.painting_author, R.string.painting_likes));
+        posts.add(new Post("https://www.familyhandyman.com/wp-content/uploads/2019/04/shutterstock_561902914-1200x675.jpg",R.string.refrig_title, R.string.refrig_author, R.string.refrig_likes));
+        posts.add(new Post("https://www.bybrittanygoldwyn.com/wp-content/uploads/2016/12/Cat-Tree-5-March-13.jpg", R.string.cattree_title, R.string.cattree_author, R.string.cattree_likes));
+        posts.add(new Post("https://nourisheveryday.com/wp-content/uploads/2016/04/Healthy-Carrot-Cake-Porridge-N2.jpg", R.string.porridge_title, R.string.porridge_author, R.string.porridge_likes));
 
     }
 

@@ -1,12 +1,12 @@
 package com.example.android.finalproject_linga_doraj_seank;
 
 public class Post {
-    int photoUrl;
+    String photoUrl;
     int title;
     int author;
     int liked;
 
-    public Post(int photoUrl, int title, int author, int liked) {
+    public Post(String photoUrl, int title, int author, int liked) {
         this.photoUrl = photoUrl;
         this.title = title;
         this.author = author;
@@ -14,14 +14,6 @@ public class Post {
     }
 
     public Post() {
-    }
-
-    public int getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(int photoUrl) {
-        this.photoUrl = photoUrl;
     }
 
     public int getTitle() {
