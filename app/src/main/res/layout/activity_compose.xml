@@ -22,9 +22,10 @@
         android:id="@+id/add_pic_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/post_button"
+        android:layout_below="@+id/post_content"
         android:src="@drawable/addpic"
-        android:layout_marginLeft="16dp"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"/>
 
     <EditText
         android:id="@+id/post_title"
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/add_pic_button"
+        android:layout_below="@+id/post_button"
         android:hint="Create a title catches people's eyes!"/>
 
     <EditText
