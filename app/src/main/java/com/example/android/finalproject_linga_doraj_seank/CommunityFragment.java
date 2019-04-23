@@ -1,8 +1,10 @@
 package com.example.android.finalproject_linga_doraj_seank;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,21 +23,30 @@ public class CommunityFragment extends Fragment {
     private static final int NUM_COLUMNS = 2;
 
     private ArrayList<Post> posts = new ArrayList<>();
+    private FloatingActionButton composeButton;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_community, container, false);
 
-        initialBitmaps();
+        composeButton = (FloatingActionButton) rootView.findViewById(R.id.fab_posting);
 
-        Log.d(TAG, "initializing staggered recyclerview.");
+        initialBitmaps();
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.staggered_recycler_view);
         PostsAdapter adapter = new PostsAdapter(posts, getContext());
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(NUM_COLUMNS, LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.setAdapter(adapter);
+
+        composeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ComposeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return rootView;
     }
