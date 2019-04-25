@@ -50,7 +50,7 @@ public class CommunityFragment extends Fragment {
         composeButton = (FloatingActionButton) rootView.findViewById(R.id.fab_posting);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mPostDatabaseReference = mFirebaseDatabase.getReference("Posts/Ld7cQmJ3djQ8EFlLAR4");
+        mPostDatabaseReference = mFirebaseDatabase.getReference("Posts");
         mChildEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -86,10 +86,10 @@ public class CommunityFragment extends Fragment {
         initialBitmaps();
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.staggered_recycler_view);
-        PostsAdapter adapter = new PostsAdapter(posts, getContext());
+        PostsAdapter adapterFB = new PostsAdapter(mPostDatabaseReference, getContext());
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(NUM_COLUMNS, LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapterFB);
 
         composeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,14 +103,7 @@ public class CommunityFragment extends Fragment {
     }
 
     private void initialBitmaps(){
-        Log.d(TAG, "InitialBitmaps preparing");
-
         posts.add(new Post(photoUrl, title, author, likes));
-        posts.add(new Post("https://www.familyhandyman.com/wp-content/uploads/2017/05/FH16JUN_PAINTS_11.jpg", "11 Little Known Painting Hacks from Expert Field Editors", "👤FamilyHandymen", "♡ 5.5K"));
-        posts.add(new Post("https://www.familyhandyman.com/wp-content/uploads/2019/04/shutterstock_561902914-1200x675.jpg","7 Genius Organization Tips to Transform Your Refrigerator", "👤JacquelineWeiss", "♡ 1.9K"));
-        posts.add(new Post("https://www.bybrittanygoldwyn.com/wp-content/uploads/2016/12/Cat-Tree-5-March-13.jpg", "50 bucks Makes a Cute Cat Tree", "👤一条鲫鱼呀", "♡ 850"));
-        posts.add(new Post("https://nourisheveryday.com/wp-content/uploads/2016/04/Healthy-Carrot-Cake-Porridge-N2.jpg", "Healthy Carrot Cake Porridge", "👤MoniqueTheNutritionist", "♡ 99"));
-
     }
 
 }

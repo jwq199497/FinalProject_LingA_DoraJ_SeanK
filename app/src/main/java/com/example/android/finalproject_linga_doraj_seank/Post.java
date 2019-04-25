@@ -31,4 +31,20 @@ public class Post {
     public String getLiked() {
         return liked;
     }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setLiked(String liked) {
+        this.liked = liked;
+    }
 }
