@@ -26,7 +26,6 @@ import java.util.ArrayList;
 
 public class CommunityFragment extends Fragment {
 
-    private static final String TAG = "CommunityFragment";
     private static final int NUM_COLUMNS = 2;
 
     private ArrayList<Post> posts = new ArrayList<>();
@@ -56,7 +55,7 @@ public class CommunityFragment extends Fragment {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 newPost = dataSnapshot.getValue(Post.class);
                 photoUrl = newPost.getPhotoUrl();
-                author = newPost.getAuthor();
+                author = "👤" + newPost.getAuthor();
                 title = newPost.getTitle();
                 likes = newPost.getLiked();
             }
