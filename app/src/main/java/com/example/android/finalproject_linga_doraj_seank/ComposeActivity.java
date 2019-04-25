@@ -128,7 +128,7 @@ public class ComposeActivity extends AppCompatActivity {
                         Uri downloadUri = task.getResult();
                         FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
                         username = currentUser.getDisplayName();
-                        Post newPost = new Post(downloadUri.toString(), postTitle.getText().toString(), username, "♡ 0");
+                        Post newPost = new Post(downloadUri.toString(), postTitle.getText().toString(), "👤"+username, "♡ 0");
                         mPostDatabaseReference.push().setValue(newPost);
                     } else {
                         Toast.makeText(ComposeActivity.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
