@@ -9,18 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:maxLines="1"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:completionThreshold="1"
-        android:hint="Select a topic" />
+        style="@style/defaultText"
+        android:hint="Select a topic"
+        />
 
     <View
         android:id="@+id/project_garden"
         android:background="@color/separator"
         android:layout_width = "fill_parent"
-        android:layout_height="8dp"
+        android:layout_height="2dp"
         android:layout_centerVertical ="true"
-        android:layout_below="@+id/login_strip"/>
+        android:layout_below="@+id/garden"/>
 
     <LinearLayout
         android:id="@+id/garden"
@@ -40,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GARDEN"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -73,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="APPLIANCE"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -105,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PAINTING"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -137,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CRAFTS"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -172,7 +175,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="3.5"
             android:text="BATHROOM"
-            android:textSize="20dp" />
+            style="@style/defaultText" />
     </LinearLayout>
 
     <View
@@ -201,7 +204,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SCHOOL"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -232,7 +235,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="KITCHEN"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
@@ -264,12 +267,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ORGANIZATION"
-            android:textSize="20dp"
+            style="@style/defaultText"
             android:layout_weight="3.5"
             android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
-
 </RelativeLayout>
 
 
