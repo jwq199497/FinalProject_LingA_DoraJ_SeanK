@@ -58,22 +58,19 @@ public class MakePencilBoxActivity extends AppCompatActivity {
         Intent i = getIntent();
         initialData();
 
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_view_2);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new ProjectsAdapter(projects,this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(MakePencilBoxActivity.this));
+        recyclerView.setAdapter(new ProjectsAdapter(projects,MakePencilBoxActivity.this));
 
 
     }
     private void initialData(){
 
         projects = new ArrayList<>();
-        projects.add(new Project(R.string.counter_top_name,R.string.level_a1, R.string.counter_top_time,R.string.rating_4, R.drawable.countertop));
         projects.add(new Project(R.string.ispring_name, R.string.level_i3, R.string.ispring_time, R.string.rating_5,R.drawable.ispringwaterfilter));
         projects.add(new Project(R.string.smart_bidet_name, R.string.level_i1, R.string.smart_bidet_time,R.string.rating_4, R.drawable.smartbidet));
         projects.add(new Project(R.string.screen_iphone_name, R.string.level_b2, R.string.screen_iphone_time,R.string.rating_5, R.drawable.screeniphone));
-        projects.add(new Project(R.string.drying_rack_name, R.string.level_m1, R.string.drying_rack_time,R.string.rating_5, R.drawable.dryingrack));
-        projects.add(new Project(R.string.pencil_box_name, R.string.level_b1, R.string.pencil_box_time,R.string.rating_4, R.drawable.pencilbox));
     }
 
 }
