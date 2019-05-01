@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -92,58 +91,13 @@
                 android:text="Recommended for you..."
                 style="@style/defaultTitle"/>
 
-            <RelativeLayout
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:background="@color/colorAccent">
-
-                <ImageView
-                    android:id="@+id/project_photo"
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="12dp"
-                    android:src="@drawable/screeniphone" />
-
-                <TextView
-                    android:id="@+id/project_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/project_photo"
-                    style="@style/cardTitle"
-                    android:text="@string/screen_iphone_name"/>
-
-                <TextView
-                    android:id="@+id/project_level"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_name"
-                    android:layout_toRightOf="@+id/project_photo"
-                    style="@style/cardParagraph"
-                    android:text="@string/level_b2"/>
-
-                <TextView
-                    android:id="@+id/project_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_level"
-                    android:layout_toRightOf="@+id/project_photo"
-                    style="@style/cardParagraph"
-                    android:text="@string/screen_iphone_time"/>
-
-                <TextView
-                    android:id="@+id/project_rating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_time"
-                    android:layout_toRightOf="@+id/project_photo"
-                    style="@style/cardParagraph"
-                    android:text="@string/rating_4"/>
-
-            </RelativeLayout>
+                android:padding="8dp"
+                android:layout_marginVertical="4dp">
+            </android.support.v7.widget.RecyclerView>
 
             <View
                 android:layout_marginTop="5dp"
