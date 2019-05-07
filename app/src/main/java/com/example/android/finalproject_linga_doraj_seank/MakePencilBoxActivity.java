@@ -66,7 +66,7 @@ public class MakePencilBoxActivity extends AppCompatActivity {
         this.btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 判斷是否登入
+                //
 //                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 //                if (user == null) {
 //                    Snackbar.make(findViewById(android.R.id.content), "You have to sign in first.", Snackbar.LENGTH_LONG).show();
@@ -108,7 +108,7 @@ public class MakePencilBoxActivity extends AppCompatActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "onInitializationSuccess: Done initializing .....");
 
-                youTubePlayer.loadVideo("8ainxpWPt_4"); //載入影片
+                youTubePlayer.loadVideo("8ainxpWPt_4");
 
                 initFirebaseRealtimeDB();
             }
